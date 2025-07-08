@@ -33,7 +33,7 @@ def load_model():
     )
     
     # Ganti 'modelGNB_kondisi_kulit (2).pkl' dengan nama file model Anda
-    model_path = 'modelGNB_kondisi_kulit.pkl' 
+    model_path = 'model_kondisi_kulit.pkl' 
     
     try:
         # Buka file dalam mode 'read-binary' ('rb')
