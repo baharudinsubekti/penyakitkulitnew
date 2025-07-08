@@ -5,4 +5,4 @@ yfinance
 pandas-datareader
 prophet
 tensorflow==2.15.0
-sklearn
+scikit-learn
