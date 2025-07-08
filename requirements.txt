@@ -4,4 +4,4 @@ streamlit
 yfinance
 pandas-datareader
 prophet
-tensorflow
+tensorflow==2.15.0
