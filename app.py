@@ -38,7 +38,7 @@ def load_model():
     try:
         # Buka file dalam mode 'read-binary' ('rb')
         with open(model_path, 'rb') as file:
-            classifier = joblib.load(file)
+            classifier = modelGNB_kondisi_kulit.pklickle.load(file)
             
     except FileNotFoundError:
         st.error(
