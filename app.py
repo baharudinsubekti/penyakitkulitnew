@@ -8,13 +8,13 @@ import pickle # Menggunakan pickle sesuai dengan error Anda
 # --- Konfigurasi Halaman ---
 st.set_page_config(
     page_title="Deteksi Penyakit Kulit",
-    page_icon="️",
+    page_icon="⚕️", # Menggunakan ikon yang lebih relevan
     layout="centered",
     initial_sidebar_state="auto",
 )
 
 # --- Judul dan Deskripsi ---
-st.title("️ Deteksi Penyakit Kulit")
+st.title("⚕️ Deteksi Penyakit Kulit")
 st.write(
     "Unggah gambar untuk mendeteksi salah satu dari lima kondisi kulit: "
     "Jerawat, Eksim, Herpes, Panu, atau Rosacea."
@@ -38,7 +38,10 @@ def load_model():
     try:
         # Buka file dalam mode 'read-binary' ('rb')
         with open(model_path, 'rb') as file:
-            classifier = model_kondisi_kulit.pklickle.load(file)
+            # BARIS INI YANG DIPERBAIKI:
+            # Sebelumnya: classifier = model_kondisi_kulit.pklickle.load(file)
+            # Seharusnya:
+            classifier = pickle.load(file)
             
     except FileNotFoundError:
         st.error(
