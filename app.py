@@ -85,7 +85,7 @@ uploaded_file = st.file_uploader(
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
-    st.image(image, caption='Gambar yang Diunggah', use_column_width=True)
+    st.image(image, caption='Gambar yang Diunggah', use_container_width=True)
 
     if st.button('Deteksi Penyakit Kulit'):
         if base_model is not None and classifier is not None:
